@@ -1,0 +1,45 @@
+.love-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.love-icon {
+	font-size: 3rem;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.love-icon.zoom-out {
+	animation: zoomOut 1s forwards;
+}
+
+@keyframes zoomOut {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+.animation-card {
+	transition: transform 0.3s ease;
+	animation: swipeRight 1s forwards;
+}
+
+@keyframes swipeRight {
+	0% {
+		transform: translateX(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(100%) rotate(30deg);
+		opacity: 0;
+	}
+}
